@@ -1,0 +1,31 @@
+{
+	"name": "nexter",
+	"version": "1.0.0",
+	"description": "Nexter webpage",
+	"main": "index.js",
+	"scripts": {
+		"watch:sass": "node-sass sass/main.scss css/style.css -w",
+		"compile:sass": "node-sass sass/main.scss css/style.comp.css",
+		"prefix:css": "postcss --use autoprefixer -b 'last 5 versions' css/style.comp.css -o css/style.prefix.css",
+		"compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+		"build:css": "npm-run-all compile:sass prefix:css compress:css"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/belie369/nexter.git"
+	},
+	"author": "belie <katarzyna.derbich@gmail.com>",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/belie369/nexter/issues"
+	},
+	"homepage": "https://github.com/belie369/nexter#readme",
+	"devDependencies": {
+		"autoprefixer": "^10.4.9",
+		"concat": "^1.0.3",
+		"cross-env": "^7.0.3",
+		"node-sass": "^7.0.1",
+		"npm-run-all": "^4.1.5",
+		"postcss-cli": "^10.0.0"
+	}
+}

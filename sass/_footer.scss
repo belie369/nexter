@@ -1,4 +1,42 @@
 .footer {
+	padding: 8rem;
 	background-color: $color-secondary;
 	grid-column: full-start / full-end;
+}
+
+.nav {
+	display: flex;
+	// grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	// grid-auto-flow: dense;
+	flex-flow: row wrap;
+	justify-content: center;
+	// align-content: center;
+	list-style: none;
+
+	&__link:link,
+	&__link:visited {
+		display: block;
+		flex: 1;
+		padding: 1.5rem;
+		color: #fff;
+		font-family: $font-display;
+		font-size: 1.4rem;
+		text-decoration: none;
+		text-transform: uppercase;
+		text-align: center;
+		transition: background-color 0.2s, transform 0.2s;
+	}
+
+	&__link:hover,
+	&__link:active {
+		background-color: rgba(#fff, 0.05);
+		transform: translateY(-3px);
+	}
+}
+
+.copyright {
+	margin-top: 6rem;
+	color: $color-grey-light-2;
+	font-size: 1.4rem;
+	text-align: center;
 }

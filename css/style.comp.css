@@ -253,5 +253,32 @@ body {
     object-fit: cover; }
 
 .footer {
+  padding: 8rem;
   background-color: #101d2c;
   grid-column: full-start / full-end; }
+
+.nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style: none; }
+  .nav__link:link, .nav__link:visited {
+    display: block;
+    flex: 1;
+    padding: 1.5rem;
+    color: #fff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background-color 0.2s, transform 0.2s; }
+  .nav__link:hover, .nav__link:active {
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: translateY(-3px); }
+
+.copyright {
+  margin-top: 6rem;
+  color: #aaa;
+  font-size: 1.4rem;
+  text-align: center; }

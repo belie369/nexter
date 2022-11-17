@@ -14,6 +14,10 @@
 	background-size: cover;
 	background-position: center;
 
+	@media only screen and (max-width: $bp-medium) {
+        grid-column: 1 / -1;
+    }
+
 	&__logo {
 		justify-self: center;
 		height: 3rem;
